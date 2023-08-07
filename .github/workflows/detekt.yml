@@ -1,0 +1,23 @@
+name: Detekt
+
+on:
+  push:
+    branches:
+      - main  # Change this to your default branch
+
+jobs:
+  detekt:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: Build and Run Detekt
+        run: |
+          ./gradlew detekt
