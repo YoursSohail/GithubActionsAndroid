@@ -15,8 +15,8 @@ jobs:
 
       - name: Setup JDK
         uses: actions/setup-java@v2
-        distribution: oracle
         with:
+          distribution: oracle
           java-version: '11'
 
       - name: Build and Run Detekt
