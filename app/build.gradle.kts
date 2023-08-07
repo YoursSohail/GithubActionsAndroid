@@ -48,6 +48,11 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    subprojects {
+        detekt {
+            baseline = file("${rootProject.projectDir}/detekt-baseline.yml")
+        }
+    }
 }
 
 dependencies {
