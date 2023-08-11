@@ -20,8 +20,7 @@ jobs:
           java-version: '17'
 
       - name: Build and Run Detekt
-        run: |
-          ./gradlew detekt
+        run: ./gradlew detekt
   build:
 
     runs-on: ubuntu-latest
